@@ -1,0 +1,2 @@
+# burgerhash
+Testnet for Zettelkasten
