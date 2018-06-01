@@ -2618,8 +2618,13 @@ bool CBlock::CheckBlock(CValidationState &state, bool fCheckPOW, bool fCheckMerk
 
 
     // Check proof of work matches claimed amount
-    if (fCheckPOW && !CheckProofOfWork())
-        return state.DoS(50, error("CheckBlock() : proof of work failed"));
+    //only do this test if block height <= nBestHeight+2, so that SDKPGAB validation can take place
+    if(nHeight <= nBestHeight+2){
+    if (fCheckPOW && !CheckProofOfWork()){
+        //reducing punishment from default 50 to 5
+        return state.DoS(5, error("CheckBlock() : proof of work failed"));
+    }
+    }
 
     // Check timestamp
     if (GetBlockTime() > GetAdjustedTime() + 2 * 60 * 60)
