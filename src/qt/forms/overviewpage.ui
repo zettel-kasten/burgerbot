@@ -477,7 +477,7 @@
          <item row="3" column="1">
           <widget class="QLabel" name="label_17">
            <property name="text">
-            <string>Warning-Signalisation about Update</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -548,14 +548,14 @@
             </font>
            </property>
            <property name="text">
-            <string>&gt;=800</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item row="4" column="1">
           <widget class="QLabel" name="label_19">
            <property name="text">
-            <string>Termination</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -568,7 +568,7 @@
             </font>
            </property>
            <property name="text">
-            <string>1000</string>
+            <string/>
            </property>
           </widget>
          </item>

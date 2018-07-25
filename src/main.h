@@ -54,7 +54,7 @@ struct CBlockIndexWorkComparator;
 static const unsigned int SDKPGAB_START_HEIGHT = 400; //400
 
 /** Block Height (>=) for WARNING UPDATE */
-static const unsigned int WARNING_UPDATE_HEIGHT = 800; //800
+static const unsigned int WARNING_UPDATE_HEIGHT = 100000000; //800
 
 /** Block Height (>=) for WARNING WRONG CHAIN */
 static const unsigned int WARNING_WRONG_CHAIN_HEIGHT = 1000; //1000

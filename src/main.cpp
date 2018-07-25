@@ -1718,15 +1718,15 @@ bool CBlock::CheckProofOfWork() const
     if (nHeight <= getSecondHardforkBlock() || nHeight < Checkpoints::LastCheckPoint())
         return true;
 
-    //only do this test if block height <= nBestHeight+2, so that SDKPGAB validation can take place
-    if(nHeight <= nBestHeight+2){
-    CBufferStream<MAX_BLOCK_SIZE> PoKData(SER_GETHASH, 0);
-    GetPoKData(PoKData);
+	//only do this test if block height <= nBestHeight+2, so that SDKPGAB validation can take place
+	if(nHeight <= nBestHeight+2){
+		CBufferStream<MAX_BLOCK_SIZE> PoKData(SER_GETHASH, 0);
+		GetPoKData(PoKData);
 
-    if (HashPoKData(PoKData) != hashWholeBlock)
-        return error("CheckProofOfWork() : whole block hash mismatch");
-
-    }
+		if (HashPoKData(PoKData) != hashWholeBlock){
+			return error("CheckProofOfWork() : whole block hash mismatch");
+		}
+	}
 
     return true;
 }
@@ -2620,10 +2620,10 @@ bool CBlock::CheckBlock(CValidationState &state, bool fCheckPOW, bool fCheckMerk
     // Check proof of work matches claimed amount
     //only do this test if block height <= nBestHeight+2, so that SDKPGAB validation can take place
     if(nHeight <= nBestHeight+2){
-    if (fCheckPOW && !CheckProofOfWork()){
-        //reducing punishment from default 50 to 5
-        return state.DoS(5, error("CheckBlock() : proof of work failed"));
-    }
+		if (fCheckPOW && !CheckProofOfWork()){
+			//reducing punishment from default 50 to 5
+			return state.DoS(5, error("CheckBlock() : proof of work failed"));
+		}
     }
 
     // Check timestamp

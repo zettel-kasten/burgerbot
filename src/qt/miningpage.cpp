@@ -79,6 +79,7 @@ void MiningPage::restartMining(bool fGenerate)
     mapArgs["-genproclimit"] = QString("%1").arg(nThreads).toUtf8().data();
 
     // unlock wallet before mining
+#ifndef __linux__
     if (fGenerate && !hasMiningprivkey && !unlockContext.get())
     {
         this->unlockContext.reset(new WalletModel::UnlockContext(model->requestUnlock()));
@@ -88,6 +89,7 @@ void MiningPage::restartMining(bool fGenerate)
             return;
         }
     }
+#endif
 
     json_spirit::Array Args;
     Args.push_back(fGenerate);
