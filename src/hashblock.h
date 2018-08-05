@@ -125,7 +125,7 @@ inline uint256 HashSDKPGAB_ODD(const T1 pbegin, const T1 pend, uint8_t A, uint8_
 
 
 template<typename T1>
-inline uint256 HashSDKPGABSPC_EVEN(const T1 pbegin, const T1 pend, uint8_t A, uint8_t B, uint sinetable_pos)
+inline uint256 HashSDKPGABSPC_EVEN(const T1 pbegin, const T1 pend, uint8_t A, uint8_t B, uint32_t sinetable_pos)
 
 {
 	sph_keccak512_context    ctx_keccak;
@@ -162,7 +162,7 @@ inline uint256 HashSDKPGABSPC_EVEN(const T1 pbegin, const T1 pend, uint8_t A, ui
 
 
 template<typename T1>
-inline uint256 HashSDKPGABSPC_ODD(const T1 pbegin, const T1 pend, uint8_t A, uint8_t B, uint sinetable_pos)
+inline uint256 HashSDKPGABSPC_ODD(const T1 pbegin, const T1 pend, uint8_t A, uint8_t B, uint32_t sinetable_pos)
 
 {
 	sph_keccak512_context    ctx_keccak;

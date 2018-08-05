@@ -1507,7 +1507,7 @@ uint256 CBlock::GetPoWHash() const
 	{
 		bytes = GetABCBytesForSDKPGABFromHeight(nHeight);
 
-		uint SDKPGABSPC_sinetable_pos = nHeight%64;
+		uint32_t SDKPGABSPC_sinetable_pos = nHeight%64;
 
 		if(nHeight%2 == 0){
 			return HashSDKPGABSPC_EVEN(Header.begin(), Header.end(), bytes.A, bytes.B, SDKPGABSPC_sinetable_pos);
