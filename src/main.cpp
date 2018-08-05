@@ -1491,32 +1491,48 @@ uint256 CBlockHeader::GetHash() const
 
 uint256 CBlock::GetPoWHash() const
 {
-    CBufferStream<185> Header = SerializeHeaderForHash2();
+	CBufferStream<185> Header = SerializeHeaderForHash2();
 
-    //only use for test-chains:
-    if (nHeight > WARNING_WRONG_CHAIN_HEIGHT && TERMINATE_WHEN_WRONG_CHAIN)
-    {
-        uint256 termination;
-        termination.SetHex("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
-        return termination;
-    }
+	ABCBytesForSDKPGAB bytes;
 
-    if (nHeight >= SDKPGAB_START_HEIGHT)
-    {
-        ABCBytesForSDKPGAB bytes;
-        bytes = GetABCBytesForSDKPGABFromHeight(nHeight);
+	//only use for test-chains:
+	if (nHeight > WARNING_WRONG_CHAIN_HEIGHT && TERMINATE_WHEN_WRONG_CHAIN)
+	{
+		uint256 termination;
+		termination.SetHex("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
+		return termination;
+	}
 
-        if(nHeight%2 == 0){
-            return HashSDKPGAB_EVEN(Header.begin(), Header.end(),bytes.A,bytes.B);
-        }
-        if(nHeight%2 == 1){
-            return HashSDKPGAB_ODD(Header.begin(), Header.end(),bytes.A,bytes.B);
-        }
-    }
-    if (nHeight < SDKPGAB_START_HEIGHT)
-    {
-        return HashSDK(Header.begin(), Header.end());
-    }
+	if (nHeight >= SDKPGABSPC_START_HEIGHT)
+	{
+		bytes = GetABCBytesForSDKPGABFromHeight(nHeight);
+
+		uint SDKPGABSPC_sinetable_pos = nHeight%64;
+
+		if(nHeight%2 == 0){
+			return HashSDKPGABSPC_EVEN(Header.begin(), Header.end(), bytes.A, bytes.B, SDKPGABSPC_sinetable_pos);
+		}
+		if(nHeight%2 == 1){
+			return HashSDKPGABSPC_ODD(Header.begin(), Header.end(), bytes.A, bytes.B, SDKPGABSPC_sinetable_pos);
+		}
+	}
+
+	if (nHeight >= SDKPGAB_START_HEIGHT && nHeight < SDKPGABSPC_START_HEIGHT)
+	{
+		bytes = GetABCBytesForSDKPGABFromHeight(nHeight);
+
+		if(nHeight%2 == 0){
+			return HashSDKPGAB_EVEN(Header.begin(), Header.end(),bytes.A,bytes.B);
+		}
+		if(nHeight%2 == 1){
+			return HashSDKPGAB_ODD(Header.begin(), Header.end(),bytes.A,bytes.B);
+		}
+	}
+
+	if (nHeight < SDKPGAB_START_HEIGHT)
+	{
+		return HashSDK(Header.begin(), Header.end());
+	}
 
 }
 
