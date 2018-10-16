@@ -246,24 +246,12 @@ inline uint256 HashSDKPGABSPCSSWS_EVEN(const T1 pbegin, const T1 pend, uint8_t A
     sph_keccak512 (&ctx_keccak, (pbegin == pend ? pblank : static_cast<const void*>(&pbegin[0])), SDKPGABSPC_sinetable[sinetable_pos] * sizeof(pbegin[0]));
     sph_keccak512_close(&ctx_keccak, static_cast<void*>(&hash[0]));
 
-    qDebug() << "------------------------------------------";
-
-    qDebug() << A << B << sinetable_pos << SDKPGABSPC_sinetable[sinetable_pos];
-
-    QByteArray array((const char*)pbegin, (pend - pbegin));
-
-    qDebug() << QString(array.toHex());
-
-    temp_hash = hash[0];
+	temp_hash = hash[0];
     hash[0] = temp_hash<<A;
     temp_hash >>=(512-A);
     hash[0] += temp_hash;
 
-    //QByteArray digest((const char*)&hash[0], 64);
-
-    //qDebug() << QString(digest.toHex());
-
-    std::string str = "";
+	std::string str = "";
     uint32_t p = 0;
     uint32_t rnd;
 
@@ -300,8 +288,6 @@ inline uint256 HashSDKPGABSPCSSWS_EVEN(const T1 pbegin, const T1 pend, uint8_t A
     }
 
     const char *cstr = str.c_str();
-
-    qDebug() << str.c_str();
 
     sph_keccak512_init(&ctx_keccak2);
     sph_keccak512 (&ctx_keccak2, static_cast<const void*>(&cstr[0]), 121);
@@ -336,24 +322,12 @@ inline uint256 HashSDKPGABSPCSSWS_ODD(const T1 pbegin, const T1 pend, uint8_t A,
     sph_keccak512 (&ctx_keccak, (pbegin == pend ? pblank : static_cast<const void*>(&pbegin[0])), SDKPGABSPC_sinetable[sinetable_pos] * sizeof(pbegin[0]));
     sph_keccak512_close(&ctx_keccak, static_cast<void*>(&hash[0]));
 
-    qDebug() << "------------------------------------------";
-
-    qDebug() << A << B << sinetable_pos << SDKPGABSPC_sinetable[sinetable_pos];
-
-    QByteArray array((const char*)pbegin, (pend - pbegin));
-
-    qDebug() << QString(array.toHex());
-
     hash[0] =~hash[0];
 
     temp_hash = hash[0];
     hash[0] = temp_hash<<A;
     temp_hash >>=(512-A);
     hash[0] += temp_hash;
-
-    //QByteArray digest((const char*)&hash[0], 64);
-
-    //qDebug() << QString(digest.toHex());
 
     std::string str = "";
     uint32_t p = 0;
@@ -393,8 +367,6 @@ inline uint256 HashSDKPGABSPCSSWS_ODD(const T1 pbegin, const T1 pend, uint8_t A,
 
     const char *cstr = str.c_str();
 
-    qDebug() << str.c_str();
-
     sph_keccak512_init(&ctx_keccak2);
     sph_keccak512 (&ctx_keccak2, static_cast<const void*>(&cstr[0]), 121);
     sph_keccak512 (&ctx_keccak2, static_cast<const void*>(&hash[0]), 64);
@@ -424,10 +396,6 @@ inline std::string GetWordSalad_SDKPGABSPCSSWS_EVEN(const T1 pbegin, const T1 pe
     sph_keccak512 (&ctx_keccak, (pbegin == pend ? pblank : static_cast<const void*>(&pbegin[0])), (pend - pbegin) * sizeof(pbegin[0]));
     sph_keccak512 (&ctx_keccak, (pbegin == pend ? pblank : static_cast<const void*>(&pbegin[0])), SDKPGABSPC_sinetable[sinetable_pos] * sizeof(pbegin[0]));
     sph_keccak512_close(&ctx_keccak, static_cast<void*>(&hash[0]));
-
-    QByteArray array((const char*)pbegin, (pend - pbegin));
-
-    qDebug() << "TEST: " << QString(array.toHex());
 
     temp_hash = hash[0];
     hash[0] = temp_hash<<A;
@@ -487,10 +455,6 @@ inline std::string GetWordSalad_SDKPGABSPCSSWS_ODD(const T1 pbegin, const T1 pen
     sph_keccak512 (&ctx_keccak, (pbegin == pend ? pblank : static_cast<const void*>(&pbegin[0])), (pend - pbegin) * sizeof(pbegin[0]));
     sph_keccak512 (&ctx_keccak, (pbegin == pend ? pblank : static_cast<const void*>(&pbegin[0])), SDKPGABSPC_sinetable[sinetable_pos] * sizeof(pbegin[0]));
     sph_keccak512_close(&ctx_keccak, static_cast<void*>(&hash[0]));
-
-    QByteArray array((const char*)pbegin, (pend - pbegin));
-
-    qDebug() << "TEST: " << QString(array.toHex());
 
     hash[0] =~hash[0];
 
