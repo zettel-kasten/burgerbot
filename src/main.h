@@ -9,7 +9,7 @@
 #include "sync.h"
 #include "net.h"
 #include "script.h"
-#include "hashblock.h"
+#include "pow/pow.h"
 #include "base58.h"
 
 #include <list>
@@ -49,6 +49,9 @@ class CMasterNodeVote;
 #endif // ENABLE_DARKSEND_FEATURES
 
 struct CBlockIndexWorkComparator;
+
+/** Block Height (>=) for SDKPGABSPCSSWS start height */
+static const unsigned int SDKPGABSPCSSWS_START_HEIGHT = 199750;
 
 /** Block Height (>=) for SDKPGABSPC start height */
 static const unsigned int SDKPGABSPC_START_HEIGHT = 97500; //97500

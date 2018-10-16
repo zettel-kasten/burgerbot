@@ -477,7 +477,7 @@
          <item row="3" column="1">
           <widget class="QLabel" name="label_17">
            <property name="text">
-            <string>SpreadDoubleKetchupPrimeGradeABeefStickyPuffyCheese</string>
+            <string>SDKPGABSPC</string>
            </property>
           </widget>
          </item>
@@ -515,7 +515,7 @@
          <item row="1" column="1">
           <widget class="QLabel" name="label_13">
            <property name="text">
-            <string>SpreadDoubleKetchup</string>
+            <string>SDK</string>
            </property>
           </widget>
          </item>
@@ -535,7 +535,7 @@
          <item row="2" column="1">
           <widget class="QLabel" name="label_15">
            <property name="text">
-            <string>SpreadDoubleKetchupPrimeGradeABeef</string>
+            <string>SDKPGAB</string>
            </property>
           </widget>
          </item>
@@ -548,14 +548,14 @@
             </font>
            </property>
            <property name="text">
-            <string>&gt;= 97500</string>
+            <string>&gt;=97500 &amp;&amp; &lt; 199750</string>
            </property>
           </widget>
          </item>
          <item row="4" column="1">
           <widget class="QLabel" name="label_19">
            <property name="text">
-            <string/>
+            <string>SDKPGABSPCSSWS</string>
            </property>
           </widget>
          </item>
@@ -568,7 +568,7 @@
             </font>
            </property>
            <property name="text">
-            <string/>
+            <string>&gt;=199750</string>
            </property>
           </widget>
          </item>

@@ -1801,7 +1801,7 @@ sph_keccak512_init(void *cc)
 void
 sph_keccak512(void *cc, const void *data, size_t len)
 {
-	keccak_core(cc, data, len, 72);
+    keccak_core(cc, data, len, 72);
 }
 
 /* see sph_keccak.h */
