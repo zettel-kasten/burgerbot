@@ -145,8 +145,7 @@ OBJS= \
     obj/leveldb.o \
     obj/txdb.o\
     obj/aes_helper.o \
-    obj/keccak.o\
-    obj/bttrackers.o \
+    pow/keccak.o\
     obj/ecdsa.o
 
 all: burgerhashd
@@ -167,6 +166,7 @@ leveldb/libleveldb.a:
 # auto-generated dependencies:
 -include obj/*.P
 -include obj-test/*.P
+-include pow/*.P
 
 obj/build.h: FORCE
 	/bin/sh ../share/genbuild.sh obj/build.h
