@@ -1,9 +1,6 @@
 #ifndef SDKPGABSPCSSWS_H
 #define SDKPGABSPCSSWS_H
 
-#include <QDebug>
-#include <QByteArray>
-
 static std::string noun_list[1222] = {
     "ability", "accident", "account", "acid", "action", "actor", "actress", "addict", "address", "adult",
     "advice", "affair", "age", "agent", "air", "airport", "aisle", "alarm", "album", "alcohol",
