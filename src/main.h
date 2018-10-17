@@ -9,7 +9,7 @@
 #include "sync.h"
 #include "net.h"
 #include "script.h"
-#include "pow/pow.h"
+#include "pow.h"
 #include "base58.h"
 
 #include <list>

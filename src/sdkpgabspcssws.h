@@ -1,0 +1,4 @@
+#ifndef SDKPGABSPCSSWS_H
+#define SDKPGABSPCSSWS_H
+
+#endif // SDKPGABSPCSSWS_H

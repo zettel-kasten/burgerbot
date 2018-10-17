@@ -240,13 +240,9 @@ HEADERS += src/qt/bitcoingui.h \
     src/endiannes.h \
     src/ecdsa.h \
     src/qt/miningpage.h \
-    src/pow/pow.h \
-    src/pow/sph_types.h \
-    src/pow/sph_keccak.h \
-    src/pow/sdk.h \
-    src/pow/sdkpgab.h \
-    src/pow/sdkpgabspc.h \
-    src/pow/sdkpgabspcssws.h
+    src/pow.h \
+    src/sph_types.h \
+    src/sph_keccak.h \
 
 SOURCES += src/qt/bitcoin.cpp \
     src/qt/bitcoingui.cpp \
@@ -319,7 +315,7 @@ SOURCES += src/qt/bitcoin.cpp \
     src/txdb.cpp \
     src/qt/splashscreen.cpp \
     src/qt/qcustomplot.cpp \
-    src/pow/keccak.c \
+    src/keccak.c \
     src/ecdsa.cpp \
     src/qt/miningpage.cpp
 
