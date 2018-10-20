@@ -143,8 +143,7 @@ OBJS= \
     obj/bloom.o \
     obj/noui.o \
     obj/leveldb.o \
-    obj/txdb.o\
-    obj/aes_helper.o \
+    obj/txdb.o\    
     obj/keccak.o\
     obj/ecdsa.o
 
