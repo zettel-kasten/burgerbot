@@ -233,14 +233,14 @@ void MiningPage::timerEvent(QTimerEvent *)
 
 		ui->label_hashalgo->setText("mining block with height "+QString::number(nHeight)+" using SpreadDoubleKetchupPrimeGradeABeef");
 
-		FirstBytesForSDKPGAB first_bytes = GetFirstBytesForSDKPGABFromHeight(nHeight);
+        FirstBytesForSDKPGAB first_bytes = GetFirstBytesForSDKPGABFromHash(pindexBest->GetBlockHash());
 		ui->label_n2->setText(QString::number(first_bytes.n2));
 		ui->label_n3->setText(QString::number(first_bytes.n3));
 		ui->label_n5->setText(QString::number(first_bytes.n5));
 		ui->label_n7->setText(QString::number(first_bytes.n7));
 
 		ABCBytesForSDKPGAB bytes;
-		bytes = GetABCBytesForSDKPGABFromHeight(nHeight);
+        bytes = GetABCBytesForSDKPGABFromHash(pindexBest->GetBlockHash());
 		ui->label_A->setText(QString::number(bytes.A));
 		ui->label_B->setText(QString::number(bytes.B));
 		ui->label_C->setText(QString::number(bytes.C));
@@ -275,7 +275,7 @@ void MiningPage::timerEvent(QTimerEvent *)
 
 				uint32_t prev_height = pindexBest->GetBlockHeader().nHeight;
 
-				ABCBytesForSDKPGAB bytes = GetABCBytesForSDKPGABFromHeight(prev_height);
+                ABCBytesForSDKPGAB bytes = GetABCBytesForSDKPGABFromHash(pindexBest->pprev->GetBlockHash());
 
 				uint32_t SDKPGABSPC_sinetable_pos = prev_height%64;
 

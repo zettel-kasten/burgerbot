@@ -116,10 +116,10 @@ OBJS= \
     obj/bttrackers.o \
     obj/ecdsa.o
 
-all: burgerhashd.exe
+all: burgerbotd.exe
 
-test check: test_burgerhash.exe FORCE
-	test_burgerhash.exe
+test check: test_burgerbot.exe FORCE
+	test_burgerbot.exe
 
 #
 # LevelDB support
@@ -139,7 +139,7 @@ obj/%.o: %.cpp $(HEADERS)
 obj/%.o: %.c $(HEADERS)
 	$(CXX) -c $(CFLAGS) -fpermissive -o $@ $<
 
-burgerhashd.exe: $(OBJS:obj/%=obj/%)
+burgerbotd.exe: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -147,11 +147,11 @@ TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
 obj-test/%.o: test/%.cpp $(HEADERS)
 	$(CXX) -c $(TESTDEFS) $(CFLAGS) -o $@ $<
 
-test_burgerhash.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_burgerbot.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ -lboost_unit_test_framework$(BOOST_SUFFIX) $(LIBS)
 
 clean:
-	rm -f burgerhashd.exe test_burgerhash.exe
+	rm -f burgerbotd.exe test_burgerbot.exe
 	rm -f obj/*
 	rm -f obj-test/*
 	cd leveldb && $(MAKE) TARGET_OS=NATIVE_WINDOWS clean && cd ..

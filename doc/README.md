@@ -1,4 +1,4 @@
-BurgerHash 0.8.x BETA
+BurgerBot 0.8.x BETA
 ====================
 
 Copyright (c) 2009-2014 The developers
@@ -11,7 +11,7 @@ cryptographic software written by Eric Young ([eay@cryptsoft.com](mailto:eay@cry
 
 Intro
 ---------------------
-BurgerHash is a free open source peer-to-peer electronic cash system that is
+BurgerBot is a free open source peer-to-peer electronic cash system that is
 completely decentralized, without the need for a central server or trusted
 parties.  Users hold the crypto keys to their own money and transact directly
 with each other, with the help of a P2P network to check for double-spending.
@@ -19,15 +19,15 @@ with each other, with the help of a P2P network to check for double-spending.
 
 Setup
 ---------------------
-You need the Qt4 run-time libraries to run BurgerHash-Qt. On Debian or Ubuntu:
+You need the Qt4 run-time libraries to run BurgerBot-Qt. On Debian or Ubuntu:
 	`sudo apt-get install libqtgui4`
 
 Unpack the files into a directory and run:
 
-- bin/32/burgerhash-qt (GUI, 32-bit)
-- bin/32/burgerhashd (headless, 32-bit)
-- bin/64/burgerhash-qt (GUI, 64-bit)
-- bin/64/burgerhashd (headless, 64-bit)
+- bin/32/burgerbot-qt (GUI, 32-bit)
+- bin/32/burgerbotd (headless, 32-bit)
+- bin/64/burgerbot-qt (GUI, 64-bit)
+- bin/64/burgerbotd (headless, 64-bit)
 
 
 Other Pages

@@ -39,7 +39,7 @@ unsigned int nTransactionsUpdated = 0;
 map<uint256, CBlockIndex*> mapBlockIndex;
 uint256 hashGenesisBlock;
 
-static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // BurgerHash: starting difficulty is 1 / 2^20
+static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // BurgerBot: starting difficulty is 1 / 2^20
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 uint256 nBestChainWork = 0;
@@ -75,7 +75,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "BurgerHash Signed Message:\n";
+const string strMessageMagic = "BurgerBot Signed Message:\n";
 
 double dHashesPerSec = 0.0;
 int64 nHPSTimerStart = 0;
@@ -1312,6 +1312,21 @@ CBlockIndex* FindBlockByHeight(int nHeight)
     return pblockindex;
 }
 
+uint256 FindPrevHashByHash(const uint256 &hash)
+{
+    map<uint256, CBlockIndex*>::iterator mbi = mapBlockIndex.find(hash);
+    if (mbi != mapBlockIndex.end())
+    {
+        return (*mbi).second->pprev->GetBlockHash();
+    }
+    map<uint256, CBlock*>::iterator mob = mapOrphanBlocks.find(hash);
+    if (mob != mapOrphanBlocks.end())
+    {
+        return (*mob).second->hashPrevBlock;
+    }
+    return hashGenesisBlock;
+}
+
 bool CBlock::ReadFromDisk(const CBlockIndex* pindex)
 {
     if (!ReadFromDisk(pindex->GetBlockPos()))
@@ -1385,8 +1400,8 @@ static int clampTimespan(int val, int lo, int hi)
 
 unsigned int static GetNextWorkRequired(const CBlockIndex* pLastBlock, const CBlockHeader *)
 {
-    const int nTargetSpacing = (pLastBlock->nHeight > (int)getFirstHardforkBlock())? 60 : 600; // BurgerHash: 1 minute after block 2200
-    const int nTargetTimespan = (pLastBlock->nHeight > (int)getSecondHardforkBlock())? 6*60*60 : 24*60*60; // BurgerHash: 6 hours after second hardfork
+    const int nTargetSpacing = (pLastBlock->nHeight > (int)getFirstHardforkBlock())? 60 : 600; // BurgerBot: 1 minute after block 2200
+    const int nTargetTimespan = (pLastBlock->nHeight > (int)getSecondHardforkBlock())? 6*60*60 : 24*60*60; // BurgerBot: 6 hours after second hardfork
     const int nInterval = nTargetTimespan/nTargetSpacing;
 
     if (pLastBlock->nHeight <= nInterval + 2)
@@ -1505,7 +1520,7 @@ uint256 CBlock::GetPoWHash() const
 
 	if (nHeight >= SDKPGABSPCSSWS_START_HEIGHT)
 	{
-		bytes = GetABCBytesForSDKPGABFromHeight(nHeight);
+        bytes = GetABCBytesForSDKPGABFromHash(hashPrevBlock);
 
 		uint32_t SDKPGABSPC_sinetable_pos = nHeight%64;
 
@@ -1519,7 +1534,7 @@ uint256 CBlock::GetPoWHash() const
 
 	if (nHeight >= SDKPGABSPC_START_HEIGHT && nHeight < SDKPGABSPCSSWS_START_HEIGHT)
 	{
-		bytes = GetABCBytesForSDKPGABFromHeight(nHeight);
+        bytes = GetABCBytesForSDKPGABFromHash(hashPrevBlock);
 
 		uint32_t SDKPGABSPC_sinetable_pos = nHeight%64;
 
@@ -1533,7 +1548,7 @@ uint256 CBlock::GetPoWHash() const
 
 	if (nHeight >= SDKPGAB_START_HEIGHT && nHeight < SDKPGABSPC_START_HEIGHT)
 	{
-		bytes = GetABCBytesForSDKPGABFromHeight(nHeight);
+        bytes = GetABCBytesForSDKPGABFromHash(hashPrevBlock);
 
 		if(nHeight%2 == 0){
 			return HashSDKPGAB_EVEN(Header.begin(), Header.end(),bytes.A,bytes.B);
@@ -1550,64 +1565,67 @@ uint256 CBlock::GetPoWHash() const
 
 }
 
-FirstBytesForSDKPGAB GetFirstBytesForSDKPGABFromHeight(uint32_t testHeight) {
+FirstBytesForSDKPGAB GetFirstBytesForSDKPGABFromHash(const uint256& hash) {
 
-    CBlockIndex* pindex2 = FindBlockByHeight(testHeight-2);
-    CBlockIndex* pindex3 = FindBlockByHeight(testHeight-3);
-    CBlockIndex* pindex5 = FindBlockByHeight(testHeight-5);
-    CBlockIndex* pindex7 = FindBlockByHeight(testHeight-7);
+    uint256 hash2 = FindPrevHashByHash(hash);
+    uint256 hash3 = FindPrevHashByHash(hash2);
+    uint256 hash4 = FindPrevHashByHash(hash3);
+    uint256 hash5 = FindPrevHashByHash(hash4);
+    uint256 hash6 = FindPrevHashByHash(hash5);
+    uint256 hash7 = FindPrevHashByHash(hash6);
 
     uint256 bit_mask;
     bit_mask.SetHex("00000000000000000000000000000000000000000000000000000000000000FF");
 
     FirstBytesForSDKPGAB bytes;
 
-    bytes.n2 = (uint8_t)(pindex2->GetBlockHash()&bit_mask).getdouble();
+    bytes.n2 = (uint8_t)(hash2&bit_mask).getdouble();
 
-    bytes.n3 = (uint8_t)(pindex3->GetBlockHash()&bit_mask).getdouble();
+    bytes.n3 = (uint8_t)(hash3&bit_mask).getdouble();
 
-    bytes.n5 = (uint8_t)(pindex5->GetBlockHash()&bit_mask).getdouble();
+    bytes.n5 = (uint8_t)(hash5&bit_mask).getdouble();
 
-    bytes.n7 = (uint8_t)(pindex7->GetBlockHash()&bit_mask).getdouble();
+    bytes.n7 = (uint8_t)(hash7&bit_mask).getdouble();
 
     return bytes;
 }
 
-ABCBytesForSDKPGAB GetABCBytesForSDKPGABFromHeight(uint32_t testHeight) {
+ABCBytesForSDKPGAB GetABCBytesForSDKPGABFromHash(const uint256& hash) {
 
     uint8_t FB_n2,FB_n3,FB_n5,FB_n7;
     uint8_t A,B,C;
+    //force an invalid result (A + B is not equal C), so that this "out of order" invalid block (should it manage to reach this check) will need rechecking once it is "in order" again.
+    ABCBytesForSDKPGAB bytes = { 0xFF, 0xFF, 0xFF };
 
-    if(testHeight <= pindexBest->nHeight+1){
-
-    CBlockIndex* pindex2 = FindBlockByHeight(testHeight-2);
-    CBlockIndex* pindex3 = FindBlockByHeight(testHeight-3);
-    CBlockIndex* pindex5 = FindBlockByHeight(testHeight-5);
-    CBlockIndex* pindex7 = FindBlockByHeight(testHeight-7);
+    uint256 hash2 = FindPrevHashByHash(hash);
+    if (hash2 == hashGenesisBlock) return bytes;
+    uint256 hash3 = FindPrevHashByHash(hash2);
+    if (hash3 == hashGenesisBlock) return bytes;
+    uint256 hash4 = FindPrevHashByHash(hash3);
+    if (hash4 == hashGenesisBlock) return bytes;
+    uint256 hash5 = FindPrevHashByHash(hash4);
+    if (hash5 == hashGenesisBlock) return bytes;
+    uint256 hash6 = FindPrevHashByHash(hash5);
+    if (hash6 == hashGenesisBlock) return bytes;
+    uint256 hash7 = FindPrevHashByHash(hash6);
+    if (hash7 == hashGenesisBlock) return bytes;
 
     uint256 bit_mask;
     bit_mask.SetHex("00000000000000000000000000000000000000000000000000000000000000FF");
 
-    FB_n2 = (uint8_t)(pindex2->GetBlockHash()&bit_mask).getdouble();
+    FB_n2 = (uint8_t)(hash2&bit_mask).getdouble();
 
-    FB_n3 = (uint8_t)(pindex3->GetBlockHash()&bit_mask).getdouble();
+    FB_n3 = (uint8_t)(hash3&bit_mask).getdouble();
 
-    FB_n5 = (uint8_t)(pindex5->GetBlockHash()&bit_mask).getdouble();
+    FB_n5 = (uint8_t)(hash5&bit_mask).getdouble();
 
-    FB_n7 = (uint8_t)(pindex7->GetBlockHash()&bit_mask).getdouble();
+    FB_n7 = (uint8_t)(hash7&bit_mask).getdouble();
 
     A = FB_n2 + FB_n3;
     B = FB_n5 + FB_n7;
 
     C = A + B;
-    } else{
-        //force an invalid result (A + B is not equal C), so that this "out of order" invalid block (should it manage to reach this check) will need rechecking once it is "in order" again.
-        A = 0xFF;
-        B = 0xFF;
-        C = 0xFF;
-    }
 
-    ABCBytesForSDKPGAB bytes;
     bytes.A = A;
     bytes.B = B;
     bytes.C = C;
@@ -1634,7 +1652,7 @@ void CBlock::GetPoKData(CBufferStream<MAX_BLOCK_SIZE>& BlockData) const
     if (nHeight >= SDKPGAB_START_HEIGHT)
     {
         ABCBytesForSDKPGAB bytes;
-        bytes = GetABCBytesForSDKPGABFromHeight(nHeight);
+        bytes = GetABCBytesForSDKPGABFromHash(hashPrevBlock);
 
         FILLER = bytes.C;
     }
@@ -1695,12 +1713,9 @@ bool CBlock::CheckProofOfWorkLite() const
     if (bnTarget <= 0 || bnTarget > bnProofOfWorkLimit)
         return error("CheckProofOfWork() : nBits below minimum work");
 
-    // Check proof of work matches claimed amount (except for the genesis block)
-    //only do this test if block height <= nBestHeight+2, so that SDKPGAB validation can take place
-    if(nHeight <= nBestHeight+2){
-    if (GetPoWHash() > bnTarget.getuint256() && GetHash() != hashGenesisBlock)
+    // Check proof of work matches claimed amount
+    if (GetPoWHash() > bnTarget.getuint256() && GetHash() != hashGenesisBlock){
         return error("CheckProofOfWork() : hash doesn't match nBits. This block height = %d, your current nBestHeight = %d", nHeight, nBestHeight);
-
     }
 
     if (nHeight <= getSecondHardforkBlock() || nHeight < Checkpoints::LastCheckPoint())
@@ -1748,15 +1763,11 @@ bool CBlock::CheckProofOfWork() const
     if (nHeight <= getSecondHardforkBlock() || nHeight < Checkpoints::LastCheckPoint())
         return true;
 
-	//only do this test if block height <= nBestHeight+2, so that SDKPGAB validation can take place
-	if(nHeight <= nBestHeight+2){
-		CBufferStream<MAX_BLOCK_SIZE> PoKData(SER_GETHASH, 0);
-		GetPoKData(PoKData);
-
-		if (HashPoKData(PoKData) != hashWholeBlock){
-			return error("CheckProofOfWork() : whole block hash mismatch");
-		}
-	}
+    CBufferStream<MAX_BLOCK_SIZE> PoKData(SER_GETHASH, 0);
+    GetPoKData(PoKData);
+    if (HashPoKData(PoKData) != hashWholeBlock){
+        return error("CheckProofOfWork() : whole block hash mismatch");
+    }
 
     return true;
 }
@@ -2648,13 +2659,11 @@ bool CBlock::CheckBlock(CValidationState &state, bool fCheckPOW, bool fCheckMerk
 
 
     // Check proof of work matches claimed amount
-    //only do this test if block height <= nBestHeight+2, so that SDKPGAB validation can take place
-    if(nHeight <= nBestHeight+2){
-		if (fCheckPOW && !CheckProofOfWork()){
-			//reducing punishment from default 50 to 5
-			return state.DoS(5, error("CheckBlock() : proof of work failed"));
-		}
+    if (fCheckPOW && !CheckProofOfWork()){
+        //reducing punishment from default 50 to 5
+        return state.DoS(5, error("CheckBlock() : proof of work failed"));
     }
+
 
     // Check timestamp
     if (GetBlockTime() > GetAdjustedTime() + 2 * 60 * 60)
@@ -2722,6 +2731,10 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
 
         if (nBits != GetNextWorkRequired(pindexPrev, this))
              return state.DoS(100, error("AcceptBlock() : incorrect proof of work"));
+
+        //if (!CheckProofOfWork()){
+        //    return state.DoS(5, error("AcceptBlock() : proof of work failed"));
+        //}
 
         // Prevent blocks from too far in the future
         if (GetBlockTime() > GetAdjustedTime() + 15 * 60)
@@ -2804,7 +2817,7 @@ bool ProcessBlock(CValidationState &state, CNode* pfrom, CBlock* pblock, CDiskBl
         return state.Invalid(error("ProcessBlock() : already have block (orphan) %s", hash.ToString().c_str()));
 
     // Preliminary checks
-    if (!pblock->CheckBlock(state))
+    if (!pblock->CheckBlock(state, false))
         return error("ProcessBlock() : CheckBlock FAILED");
 
     CBlockIndex* pcheckpoint = Checkpoints::GetLastCheckpoint(mapBlockIndex);
@@ -4661,7 +4674,7 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// BurgerHashMiner
+// BurgerBotMiner
 //
 
 // Some explaining would be appreciated
@@ -5017,7 +5030,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey* preservekey)
         return false;
 
     //// debug print
-    printf("BurgerHashMiner:\n");
+    printf("BurgerBotMiner:\n");
     printf("proof-of-work found  \n  hash: %s  \ntarget: %s\n", hash.GetHex().c_str(), hashTarget.GetHex().c_str());
     pblock->print();
     printf("generated %s\n", FormatMoney(pblock->vtx[0].vout[0].nValue).c_str());
@@ -5026,7 +5039,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey* preservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != hashBestChain)
-            return error("BurgerHashMiner : generated block is stale");
+            return error("BurgerBotMiner : generated block is stale");
 
         // Remove key from key pool
         if (preservekey)
@@ -5041,17 +5054,17 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey* preservekey)
         // Process this block the same as if we had received it from another node
         CValidationState state;
         if (!ProcessBlock(state, NULL, pblock))
-            return error("BurgerHashMiner : ProcessBlock, block not accepted");
+            return error("BurgerBotMiner : ProcessBlock, block not accepted");
     }
 
     return true;
 }
 
-void static BurgerHashMiner(CWallet *pwallet)
+void static BurgerBotMiner(CWallet *pwallet)
 {
-    printf("BurgerHashMiner started\n");
+    printf("BurgerBotMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("BurgerHash-miner");
+    RenameThread("BurgerBot-miner");
 
     std::string PrivAddress = GetArg("-miningprivkey", "");
 
@@ -5096,7 +5109,7 @@ void static BurgerHashMiner(CWallet *pwallet)
             return;
         CBlock *pblock = &pblocktemplate->block;
 
-        printf("Running BurgerHashMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
+        printf("Running BurgerBotMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
                ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
 
@@ -5193,7 +5206,7 @@ void static BurgerHashMiner(CWallet *pwallet)
     } }
     catch (boost::thread_interrupted)
     {
-        printf("BurgerHashMiner terminated\n");
+        printf("BurgerBotMiner terminated\n");
         throw;
     }
 }
@@ -5220,7 +5233,7 @@ void GenerateBitcoins(bool fGenerate, CWallet* pwallet)
 
     minerThreads = new boost::thread_group();
     for (int i = 0; i < nThreads; i++)
-        minerThreads->create_thread(boost::bind(&BurgerHashMiner, pwallet));
+        minerThreads->create_thread(boost::bind(&BurgerBotMiner, pwallet));
 }
 
 // Amount compression:

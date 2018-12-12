@@ -20,14 +20,14 @@
 static unsigned char pchMessageStartTest[4] = { 0xc2, 0xe3, 0xcb, 0xfa };
 
 // Zettelkasten message start
-static unsigned char pchMessageStartBurgerHash[4] = { 0xF7, 0xCF, 0xF3, 0xF7 };
+static unsigned char pchMessageStartBurgerBot[4] = { 0xF7, 0xCF, 0xF3, 0xF7 };
 
 void GetMessageStart(unsigned char pchMessageStart[], bool)
 {
     if (fTestNet)
         memcpy(pchMessageStart, pchMessageStartTest, sizeof(pchMessageStartTest));
     else
-        memcpy(pchMessageStart, pchMessageStartBurgerHash, sizeof(pchMessageStartBurgerHash));
+        memcpy(pchMessageStart, pchMessageStartBurgerBot, sizeof(pchMessageStartBurgerBot));
 }
 
 

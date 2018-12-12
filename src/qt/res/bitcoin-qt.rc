@@ -20,14 +20,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "burgerhash"
-            VALUE "FileDescription",    "burgerhash-Qt (OSS GUI client for burgerhash)"
+            VALUE "CompanyName",        "burgerbot"
+            VALUE "FileDescription",    "burgerbot-Qt (OSS GUI client for burgerbot)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "burgerhash-qt"
+            VALUE "InternalName",       "burgerbot-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "burgerhash-qt.exe"
-            VALUE "ProductName",        "burgerhash-Qt"
+            VALUE "OriginalFilename",   "burgerbot-qt.exe"
+            VALUE "ProductName",        "burgerbot-Qt"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

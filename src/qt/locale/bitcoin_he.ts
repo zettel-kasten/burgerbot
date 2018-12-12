@@ -4,12 +4,12 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About BurgerHash</source>
+        <source>About BurgerBot</source>
         <translation>אודות לייטקוין</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;BurgerHash&lt;/b&gt; version</source>
+        <source>&lt;b&gt;BurgerBot&lt;/b&gt; version</source>
         <translation>גרסת &lt;b&gt;לייטקוין&lt;/b&gt;</translation>
     </message>
     <message>
@@ -34,7 +34,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>The BurgerHash developers</source>
+        <source>The BurgerBot developers</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -67,7 +67,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your BurgerHash addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <source>These are your BurgerBot addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
         <translation>אלה כתובת הלייטקוין שלך עבור קבלת תשלומים. ייתכן ותרצה לתת כתובת שונה לכל שולח כדי שתוכל לעקוב אחר מי משלם לך.</translation>
     </message>
     <message>
@@ -82,7 +82,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a BurgerHash address</source>
+        <source>Sign a message to prove you own a BurgerBot address</source>
         <translation>חתום על הודעה בכדי להוכיח כי אתה הבעלים של כתובת לייטקוין.</translation>
     </message>
     <message>
@@ -107,7 +107,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified BurgerHash address</source>
+        <source>Verify a message to ensure it was signed with a specified BurgerBot address</source>
         <translation>אמת הודעה בכדי להבטיח שהיא נחתמה עם כתובת לייטקוין מסוימת.</translation>
     </message>
     <message>
@@ -122,7 +122,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your BurgerHash addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BurgerBot addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>אלה כתובת הלייטקוין שלך עבור שליחת תשלומים. תמיד בדוק את מספר ואת כתובות מקבלי התשלומים לפני שליחת מטבעות.</translation>
     </message>
     <message>
@@ -248,7 +248,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BurgerHashS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BurgerBotS&lt;/b&gt;!</source>
         <translation>אזהרה: אם אתה מצפין את הארנק ומאבד את הסיסמא, אתה &lt;b&gt;תאבד את כל הלייטקוינים שלך&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -275,7 +275,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>BurgerHash will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BurgerHashs from being stolen by malware infecting your computer.</source>
+        <source>BurgerBot will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BurgerBots from being stolen by malware infecting your computer.</source>
         <translation>לייטקוין ייסגר עכשיו כדי להשלים את תהליך ההצפנה. זכור שהצפנת הארנק שלך אינו יכול להגן באופן מלא על הלייטקוינים שלך מתוכנות זדוניות המושתלות על המחשב.</translation>
     </message>
     <message>
@@ -374,7 +374,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about BurgerHash</source>
+        <source>Show information about BurgerBot</source>
         <translation>הצג מידע על לייטקוין</translation>
     </message>
     <message>
@@ -419,12 +419,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a BurgerHash address</source>
+        <source>Send coins to a BurgerBot address</source>
         <translation>שלח מטבעות לכתובת לייטקוין</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for BurgerHash</source>
+        <source>Modify configuration options for BurgerBot</source>
         <translation>שנה אפשרויות תצורה עבור לייטקוין</translation>
     </message>
     <message>
@@ -455,7 +455,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>BurgerHash</source>
+        <source>BurgerBot</source>
         <translation>לייטקוין</translation>
     </message>
     <message>
@@ -480,7 +480,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About BurgerHash</source>
+        <source>&amp;About BurgerBot</source>
         <translation>אודות לייטקוין</translation>
     </message>
     <message>
@@ -500,12 +500,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your BurgerHash addresses to prove you own them</source>
+        <source>Sign messages with your BurgerBot addresses to prove you own them</source>
         <translation>חתום על הודעות עם כתובות הלייטקוין שלך כדי להוכיח שהן בבעלותך</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified BurgerHash addresses</source>
+        <source>Verify messages to ensure they were signed with specified BurgerBot addresses</source>
         <translation>אמת הודעות כדי להבטיח שהן נחתמו עם כתובת לייטקוין מסוימות</translation>
     </message>
     <message>
@@ -536,12 +536,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+47"/>
-        <source>BurgerHash client</source>
+        <source>BurgerBot client</source>
         <translation>תוכנת לייטקוין</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to BurgerHash network</source>
+        <source>%n active connection(s) to BurgerBot network</source>
         <translation><numerusform>חיבור פעיל אחד לרשת הלייטקוין</numerusform><numerusform>%n חיבורים פעילים לרשת הלייטקוין</numerusform></translation>
     </message>
     <message>
@@ -655,7 +655,7 @@ Address: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid BurgerHash address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid BurgerBot address or malformed URI parameters.</source>
         <translation>לא ניתן לנתח URI! זה יכול להיגרם כתוצאה מכתובת לייטקוין לא תקינה או פרמטרי URI חסרי צורה תקינה.</translation>
     </message>
     <message>
@@ -670,7 +670,7 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. BurgerHash can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. BurgerBot can no longer continue safely and will quit.</source>
         <translation>שגיאה סופנית אירעה. לייטקוין אינו יכול להמשיך לפעול בבטחה ולכן ייסגר.</translation>
     </message>
 </context>
@@ -736,7 +736,7 @@ Address: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid BurgerHash address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid BurgerBot address.</source>
         <translation>הכתובת שהוכנסה &quot;%1&quot; אינה כתובת לייטקוין תקינה.</translation>
     </message>
     <message>
@@ -755,8 +755,8 @@ Address: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>BurgerHash-Qt</source>
-        <translation>BurgerHash-Qt</translation>
+        <source>BurgerBot-Qt</source>
+        <translation>BurgerBot-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -818,12 +818,12 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start BurgerHash after logging in to the system.</source>
+        <source>Automatically start BurgerBot after logging in to the system.</source>
         <translation>הפעל את לייטקוין באופן עצמאי לאחר התחברות למערכת.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start BurgerHash on system login</source>
+        <source>&amp;Start BurgerBot on system login</source>
         <translation>התחל את לייטקוין בעת התחברות למערכת</translation>
     </message>
     <message>
@@ -843,7 +843,7 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the BurgerHash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the BurgerBot client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>פתח את פורט לייטקוין בנתב באופן אוטומטי. עובד רק אם UPnP מאופשר ונתמך ע&quot;י הנתב.</translation>
     </message>
     <message>
@@ -853,7 +853,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the BurgerHash network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the BurgerBot network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation>התחבר לרשת הלייטקוין דרך פרוקסי SOCKS (למשל בעת התחברות דרך Tor).</translation>
     </message>
     <message>
@@ -928,7 +928,7 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting BurgerHash.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting BurgerBot.</source>
         <translation>ניתן לקבוע כאן את שפת ממשק המשתמש. הגדרה זו תחול לאחר הפעלה מחדש של לייטקוין.</translation>
     </message>
     <message>
@@ -943,7 +943,7 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show BurgerHash addresses in the transaction list or not.</source>
+        <source>Whether to show BurgerBot addresses in the transaction list or not.</source>
         <translation>האם להציג כתובות לייטקוין ברשימת הפעולות או לא.</translation>
     </message>
     <message>
@@ -995,7 +995,7 @@ Address: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting BurgerHash.</source>
+        <source>This setting will take effect after restarting BurgerBot.</source>
         <translation>הגדרה זו תחול לאחר הפעלה מחדש של לייטקוין.</translation>
     </message>
     <message>
@@ -1014,7 +1014,7 @@ Address: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BurgerHash network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BurgerBot network after a connection is established, but this process has not completed yet.</source>
         <translation>המידע המוצג עשוי להיות מיושן. הארנק שלך מסתנכרן באופן אוטומטי עם רשת הלייטקוין לאחר כינון חיבור, אך התהליך טרם הסתיים.</translation>
     </message>
     <message>
@@ -1068,7 +1068,7 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start BurgerHash: click-to-pay handler</source>
+        <source>Cannot start BurgerBot: click-to-pay handler</source>
         <translation>לא ניתן להתחיל את לייטקוין: מפעיל לחץ-לתשלום </translation>
     </message>
 </context>
@@ -1218,8 +1218,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the BurgerHash-Qt help message to get a list with possible BurgerHash command-line options.</source>
-        <translation>הצג את הודעה העזרה של BurgerHash-qt כדי לקבל רשימה של אפשרויות שורת פקודה של לייטקוין.</translation>
+        <source>Show the BurgerBot-Qt help message to get a list with possible BurgerBot command-line options.</source>
+        <translation>הצג את הודעה העזרה של BurgerBot-qt כדי לקבל רשימה של אפשרויות שורת פקודה של לייטקוין.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1238,12 +1238,12 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>BurgerHash - Debug window</source>
+        <source>BurgerBot - Debug window</source>
         <translation>לייטקוין - חלון ניפוי</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>BurgerHash Core</source>
+        <source>BurgerBot Core</source>
         <translation>ליבת לייטקוין</translation>
     </message>
     <message>
@@ -1253,7 +1253,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the BurgerHash debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the BurgerBot debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>פתח את קובץ יומן הניפוי מתיקיית הנתונים הנוכחית. זה עשוי לקחת מספר שניות עבור קובצי יומן גדולים.</translation>
     </message>
     <message>
@@ -1263,7 +1263,7 @@ Address: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the BurgerHash RPC console.</source>
+        <source>Welcome to the BurgerBot RPC console.</source>
         <translation>ברוכים הבאים ללוח בקרת RPC של לייטקוין</translation>
     </message>
     <message>
@@ -1447,7 +1447,7 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a BurgerHash address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <source>Enter a BurgerBot address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
         <translation>הכנס כתובת לייטקוין (למשל Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
 </context>
@@ -1512,7 +1512,7 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this BurgerHash address</source>
+        <source>Sign the message to prove you own this BurgerBot address</source>
         <translation>חתום על ההודעה כדי להוכיח שכתובת הלייטקוין הזו בבעלותך.</translation>
     </message>
     <message>
@@ -1548,7 +1548,7 @@ Address: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified BurgerHash address</source>
+        <source>Verify the message to ensure it was signed with the specified BurgerBot address</source>
         <translation>אמת את ההודעה כדי להבטיח שהיא נחתמה עם כתובת הלייטקוין הנתונה</translation>
     </message>
     <message>
@@ -1564,7 +1564,7 @@ Address: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a BurgerHash address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <source>Enter a BurgerBot address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
         <translation>הכנס כתובת לייטקוין (למשל Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
@@ -1574,7 +1574,7 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter BurgerHash signature</source>
+        <source>Enter BurgerBot signature</source>
         <translation>הכנס חתימת לייטקוין</translation>
     </message>
     <message>
@@ -1648,7 +1648,7 @@ Address: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The BurgerHash developers</source>
+        <source>The BurgerBot developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2186,7 +2186,7 @@ Address: %4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>BurgerHash version</source>
+        <source>BurgerBot version</source>
         <translation>גרסת לייטקוין</translation>
     </message>
     <message>
@@ -2196,8 +2196,8 @@ Address: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or BurgerHashd</source>
-        <translation>שלח פקודה ל -server או BurgerHashd</translation>
+        <source>Send command to -server or BurgerBotd</source>
+        <translation>שלח פקודה ל -server או BurgerBotd</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2216,13 +2216,13 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: BurgerHash.conf)</source>
-        <translation>ציין קובץ הגדרות (ברירת מחדל: BurgerHash.conf)</translation>
+        <source>Specify configuration file (default: BurgerBot.conf)</source>
+        <translation>ציין קובץ הגדרות (ברירת מחדל: BurgerBot.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: BurgerHashd.pid)</source>
-        <translation>ציין קובץ pid (ברירת מחדל: BurgerHashd.pid)</translation>
+        <source>Specify pid file (default: BurgerBotd.pid)</source>
+        <translation>ציין קובץ pid (ברירת מחדל: BurgerBotd.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2299,24 +2299,24 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=BurgerHashrpc
+rpcuser=BurgerBotrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;BurgerHash Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;BurgerBot Alert&quot; admin@foo.com
 </source>
         <translation>%s, עליך לקבוע סיסמת RPC בקובץ הקונפיגורציה:
  %s
 מומלץ להשתמש בסיסמא האקראית הבאה:
-rpcuser=BurgerHashrpc
+rpcuser=BurgerBotrpc
 rpcpassword=%s
 (אין צורך לזכור את הסיסמה)
 אסור ששם המשתמש והסיסמא יהיו זהים.
 אם הקובץ אינו קיים, צור אותו עם הרשאות קריאה לבעלים בלבד.
 זה מומלץ לסמן alertnotify כדי לקבל דיווח על תקלות;
-למשל: alertnotify=echo %%s | mail -s &quot;BurgerHash Alert&quot; admin@foo.com 
+למשל: alertnotify=echo %%s | mail -s &quot;BurgerBot Alert&quot; admin@foo.com 
 </translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. BurgerHash is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. BurgerBot is probably already running.</source>
         <translation>לא מסוגל להשיג נעילה על תיקיית הנתונים %s. כנראה שלייטקוין כבר רץ.</translation>
     </message>
     <message>
@@ -2376,7 +2376,7 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BurgerHash will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BurgerBot will not work properly.</source>
         <translation>אזהרה: אנא בדוק שהתאריך והשעה של המחשב שלך נכונים! אם השעון שלך אינו נכון לייטקוין לא יעבוד כראוי.</translation>
     </message>
     <message>
@@ -2626,7 +2626,7 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the BurgerHash Wiki for SSL setup instructions)</source>
+        <source>SSL options: (see the BurgerBot Wiki for SSL setup instructions)</source>
         <translation>אפשרויות SSL: (ראה את הויקי של לייטקוין עבור הוראות הגדרת SSL)</translation>
     </message>
     <message>
@@ -2816,12 +2816,12 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of BurgerHash</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of BurgerBot</source>
         <translation>שגיאה בטעינת הקובץ wallet.dat: הארנק דורש גרסה חדשה יותר של לייטקוין</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart BurgerHash to complete</source>
+        <source>Wallet needed to be rewritten: restart BurgerBot to complete</source>
         <translation>יש לכתוב מחדש את הארנק: אתחל את לייטקוין לסיום</translation>
     </message>
     <message>
@@ -2881,7 +2881,7 @@ rpcpassword=%s
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. BurgerHash is probably already running.</source>
+        <source>Unable to bind to %s on this computer. BurgerBot is probably already running.</source>
         <translation>לא ניתן לקשור ל-%s במחשב זה. לייטקוין כנראה עדיין רץ.</translation>
     </message>
     <message>

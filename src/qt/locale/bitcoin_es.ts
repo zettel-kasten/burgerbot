@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About BurgerHash</source>
-        <translation>Acerca de BurgerHash</translation>
+        <source>About BurgerBot</source>
+        <translation>Acerca de BurgerBot</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;BurgerHash&lt;/b&gt; version</source>
-        <translation>Versión de &lt;b&gt;BurgerHash&lt;/b&gt;</translation>
+        <source>&lt;b&gt;BurgerBot&lt;/b&gt; version</source>
+        <translation>Versión de &lt;b&gt;BurgerBot&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -37,8 +37,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+0"/>
-        <source>The BurgerHash developers</source>
-        <translation>Los programadores BurgerHash</translation>
+        <source>The BurgerBot developers</source>
+        <translation>Los programadores BurgerBot</translation>
     </message>
 </context>
 <context>
@@ -70,8 +70,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your BurgerHash addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Estas son sus direcciones BurgerHash para recibir pagos. Puede utilizar una diferente por cada persona emisora para saber quién le está pagando.</translation>
+        <source>These are your BurgerBot addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Estas son sus direcciones BurgerBot para recibir pagos. Puede utilizar una diferente por cada persona emisora para saber quién le está pagando.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -85,8 +85,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a BurgerHash address</source>
-        <translation>Firmar un mensaje para demostrar que se posee una dirección BurgerHash</translation>
+        <source>Sign a message to prove you own a BurgerBot address</source>
+        <translation>Firmar un mensaje para demostrar que se posee una dirección BurgerBot</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -110,8 +110,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified BurgerHash address</source>
-        <translation>Verificar un mensaje para comprobar que fue firmado con la dirección BurgerHash indicada</translation>
+        <source>Verify a message to ensure it was signed with a specified BurgerBot address</source>
+        <translation>Verificar un mensaje para comprobar que fue firmado con la dirección BurgerBot indicada</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -125,8 +125,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your BurgerHash addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son sus direcciones BurgerHash para enviar pagos. Compruebe siempre la cantidad y la dirección receptora antes de transferir monedas.</translation>
+        <source>These are your BurgerBot addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son sus direcciones BurgerBot para enviar pagos. Compruebe siempre la cantidad y la dirección receptora antes de transferir monedas.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -251,8 +251,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BurgerHashS&lt;/b&gt;!</source>
-        <translation>Atencion: ¡Si cifra su monedero y pierde la contraseña perderá &lt;b&gt;TODOS SUS BurgerHashS&lt;/b&gt;!&quot;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BurgerBotS&lt;/b&gt;!</source>
+        <translation>Atencion: ¡Si cifra su monedero y pierde la contraseña perderá &lt;b&gt;TODOS SUS BurgerBotS&lt;/b&gt;!&quot;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -278,8 +278,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="-56"/>
-        <source>BurgerHash will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BurgerHashs from being stolen by malware infecting your computer.</source>
-        <translation>BurgerHash se cerrará para finalizar el proceso de cifrado. Recuerde que el cifrado de su monedero no puede proteger totalmente sus BurgerHashs de robo por malware que infecte su sistema.</translation>
+        <source>BurgerBot will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BurgerBots from being stolen by malware infecting your computer.</source>
+        <translation>BurgerBot se cerrará para finalizar el proceso de cifrado. Recuerde que el cifrado de su monedero no puede proteger totalmente sus BurgerBots de robo por malware que infecte su sistema.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -377,8 +377,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about BurgerHash</source>
-        <translation>Mostrar información acerca de BurgerHash</translation>
+        <source>Show information about BurgerBot</source>
+        <translation>Mostrar información acerca de BurgerBot</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -422,13 +422,13 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a BurgerHash address</source>
-        <translation>Enviar monedas a una dirección BurgerHash</translation>
+        <source>Send coins to a BurgerBot address</source>
+        <translation>Enviar monedas a una dirección BurgerBot</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for BurgerHash</source>
-        <translation>Modificar las opciones de configuración de BurgerHash</translation>
+        <source>Modify configuration options for BurgerBot</source>
+        <translation>Modificar las opciones de configuración de BurgerBot</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -458,8 +458,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>BurgerHash</source>
-        <translation>BurgerHash</translation>
+        <source>BurgerBot</source>
+        <translation>BurgerBot</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -483,8 +483,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About BurgerHash</source>
-        <translation>&amp;Acerca de BurgerHash</translation>
+        <source>&amp;About BurgerBot</source>
+        <translation>&amp;Acerca de BurgerBot</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -503,13 +503,13 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your BurgerHash addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones BurgerHash para demostrar la propiedad</translation>
+        <source>Sign messages with your BurgerBot addresses to prove you own them</source>
+        <translation>Firmar mensajes con sus direcciones BurgerBot para demostrar la propiedad</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified BurgerHash addresses</source>
-        <translation>Verificar mensajes comprobando que están firmados con direcciones BurgerHash concretas</translation>
+        <source>Verify messages to ensure they were signed with specified BurgerBot addresses</source>
+        <translation>Verificar mensajes comprobando que están firmados con direcciones BurgerBot concretas</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -539,13 +539,13 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+47"/>
-        <source>BurgerHash client</source>
-        <translation>Cliente BurgerHash</translation>
+        <source>BurgerBot client</source>
+        <translation>Cliente BurgerBot</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to BurgerHash network</source>
-        <translation><numerusform>%n conexión activa hacia la red BurgerHash</numerusform><numerusform>%n conexiones activas hacia la red BurgerHash</numerusform></translation>
+        <source>%n active connection(s) to BurgerBot network</source>
+        <translation><numerusform>%n conexión activa hacia la red BurgerBot</numerusform><numerusform>%n conexiones activas hacia la red BurgerBot</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -659,8 +659,8 @@ Dirección: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid BurgerHash address or malformed URI parameters.</source>
-        <translation>¡No se puede interpretar la URI! Esto puede deberse a una dirección BurgerHash inválida o a parámetros de URI mal formados.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid BurgerBot address or malformed URI parameters.</source>
+        <translation>¡No se puede interpretar la URI! Esto puede deberse a una dirección BurgerBot inválida o a parámetros de URI mal formados.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -674,8 +674,8 @@ Dirección: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. BurgerHash can no longer continue safely and will quit.</source>
-        <translation>Ha ocurrido un error crítico. BurgerHash ya no puede continuar con seguridad y se cerrará.</translation>
+        <source>A fatal error occurred. BurgerBot can no longer continue safely and will quit.</source>
+        <translation>Ha ocurrido un error crítico. BurgerBot ya no puede continuar con seguridad y se cerrará.</translation>
     </message>
 </context>
 <context>
@@ -740,8 +740,8 @@ Dirección: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid BurgerHash address.</source>
-        <translation>La dirección introducida &quot;%1&quot; no es una dirección BurgerHash válida.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid BurgerBot address.</source>
+        <translation>La dirección introducida &quot;%1&quot; no es una dirección BurgerBot válida.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -759,8 +759,8 @@ Dirección: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>BurgerHash-Qt</source>
-        <translation>BurgerHash-Qt</translation>
+        <source>BurgerBot-Qt</source>
+        <translation>BurgerBot-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -822,13 +822,13 @@ Dirección: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start BurgerHash after logging in to the system.</source>
-        <translation>Iniciar BurgerHash automáticamente al encender el sistema.</translation>
+        <source>Automatically start BurgerBot after logging in to the system.</source>
+        <translation>Iniciar BurgerBot automáticamente al encender el sistema.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start BurgerHash on system login</source>
-        <translation>&amp;Iniciar BurgerHash al iniciar el sistema</translation>
+        <source>&amp;Start BurgerBot on system login</source>
+        <translation>&amp;Iniciar BurgerBot al iniciar el sistema</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -847,8 +847,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the BurgerHash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente BurgerHash en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
+        <source>Automatically open the BurgerBot client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente BurgerBot en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -857,8 +857,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the BurgerHash network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Conectar a la red BurgerHash a través de un proxy SOCKS (ej. para conectar con la red Tor)</translation>
+        <source>Connect to the BurgerBot network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Conectar a la red BurgerBot a través de un proxy SOCKS (ej. para conectar con la red Tor)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -932,8 +932,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting BurgerHash.</source>
-        <translation>El idioma de la interfaz de usuario puede establecerse aquí. Este ajuste se aplicará cuando se reinicie BurgerHash.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting BurgerBot.</source>
+        <translation>El idioma de la interfaz de usuario puede establecerse aquí. Este ajuste se aplicará cuando se reinicie BurgerBot.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -947,8 +947,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show BurgerHash addresses in the transaction list or not.</source>
-        <translation>Mostrar o no las direcciones BurgerHash en la lista de transacciones.</translation>
+        <source>Whether to show BurgerBot addresses in the transaction list or not.</source>
+        <translation>Mostrar o no las direcciones BurgerBot en la lista de transacciones.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -999,8 +999,8 @@ Dirección: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting BurgerHash.</source>
-        <translation>Esta configuración tendrá efecto tras reiniciar BurgerHash.</translation>
+        <source>This setting will take effect after restarting BurgerBot.</source>
+        <translation>Esta configuración tendrá efecto tras reiniciar BurgerBot.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1018,8 +1018,8 @@ Dirección: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BurgerHash network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red BurgerHash después de que se haya establecido una conexión , pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BurgerBot network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red BurgerBot después de que se haya establecido una conexión , pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1072,8 +1072,8 @@ Dirección: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start BurgerHash: click-to-pay handler</source>
-        <translation>No se pudo iniciar BurgerHash: manejador de pago-al-clic</translation>
+        <source>Cannot start BurgerBot: click-to-pay handler</source>
+        <translation>No se pudo iniciar BurgerBot: manejador de pago-al-clic</translation>
     </message>
 </context>
 <context>
@@ -1222,8 +1222,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the BurgerHash-Qt help message to get a list with possible BurgerHash command-line options.</source>
-        <translation>Mostrar el mensaje de ayuda de BurgerHash-Qt que enumera las opciones disponibles de línea de órdenes para BurgerHash.</translation>
+        <source>Show the BurgerBot-Qt help message to get a list with possible BurgerBot command-line options.</source>
+        <translation>Mostrar el mensaje de ayuda de BurgerBot-Qt que enumera las opciones disponibles de línea de órdenes para BurgerBot.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1242,13 +1242,13 @@ Dirección: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>BurgerHash - Debug window</source>
-        <translation>BurgerHash - Ventana de depuración</translation>
+        <source>BurgerBot - Debug window</source>
+        <translation>BurgerBot - Ventana de depuración</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>BurgerHash Core</source>
-        <translation>Núcleo de BurgerHash</translation>
+        <source>BurgerBot Core</source>
+        <translation>Núcleo de BurgerBot</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1257,7 +1257,7 @@ Dirección: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the BurgerHash debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the BurgerBot debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>Abrir el archivo de registro de depuración en el directorio actual de datos. Esto puede llevar varios segundos para archivos de registro grandes.</translation>
     </message>
     <message>
@@ -1267,8 +1267,8 @@ Dirección: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the BurgerHash RPC console.</source>
-        <translation>Bienvenido a la consola RPC de BurgerHash</translation>
+        <source>Welcome to the BurgerBot RPC console.</source>
+        <translation>Bienvenido a la consola RPC de BurgerBot</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1451,8 +1451,8 @@ Dirección: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a BurgerHash address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Introduzca una dirección BurgerHash (ej. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>Enter a BurgerBot address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Introduzca una dirección BurgerBot (ej. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
 </context>
 <context>
@@ -1516,8 +1516,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this BurgerHash address</source>
-        <translation>Firmar el mensaje para demostrar que se posee esta dirección BurgerHash</translation>
+        <source>Sign the message to prove you own this BurgerBot address</source>
+        <translation>Firmar el mensaje para demostrar que se posee esta dirección BurgerBot</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1552,8 +1552,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified BurgerHash address</source>
-        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección BurgerHash indicada</translation>
+        <source>Verify the message to ensure it was signed with the specified BurgerBot address</source>
+        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección BurgerBot indicada</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1568,8 +1568,8 @@ Dirección: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a BurgerHash address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Introduzca una dirección BurgerHash (ej. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>Enter a BurgerBot address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Introduzca una dirección BurgerBot (ej. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1578,8 +1578,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter BurgerHash signature</source>
-        <translation>Introduzca una firma BurgerHash</translation>
+        <source>Enter BurgerBot signature</source>
+        <translation>Introduzca una firma BurgerBot</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1652,8 +1652,8 @@ Dirección: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The BurgerHash developers</source>
-        <translation>Los programadores BurgerHash</translation>
+        <source>The BurgerBot developers</source>
+        <translation>Los programadores BurgerBot</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2190,8 +2190,8 @@ Dirección: %4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>BurgerHash version</source>
-        <translation>Versión de BurgerHash</translation>
+        <source>BurgerBot version</source>
+        <translation>Versión de BurgerBot</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2200,8 +2200,8 @@ Dirección: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or BurgerHashd</source>
-        <translation>Envíar comando a -server o BurgerHashd</translation>
+        <source>Send command to -server or BurgerBotd</source>
+        <translation>Envíar comando a -server o BurgerBotd</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2223,14 +2223,14 @@ Dirección: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: BurgerHash.conf)</source>
-        <translation>Especificar archivo de configuración (predeterminado: BurgerHash.conf)
+        <source>Specify configuration file (default: BurgerBot.conf)</source>
+        <translation>Especificar archivo de configuración (predeterminado: BurgerBot.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: BurgerHashd.pid)</source>
-        <translation>Especificar archivo pid (predeterminado: BurgerHash.pid)
+        <source>Specify pid file (default: BurgerBotd.pid)</source>
+        <translation>Especificar archivo pid (predeterminado: BurgerBot.pid)
 </translation>
     </message>
     <message>
@@ -2311,24 +2311,24 @@ Dirección: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=BurgerHashrpc
+rpcuser=BurgerBotrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;BurgerHash Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;BurgerBot Alert&quot; admin@foo.com
 </source>
         <translation>%s, debe establecer un valor rpcpassword en el archivo de configuración:
 %s
 Se recomienda utilizar la siguiente contraseña aleatoria:
-rpcuser=BurgerHashrpc
+rpcuser=BurgerBotrpc
 rpcpassword=%s
 (no es necesario recordar esta contraseña)
 El nombre de usuario y la contraseña DEBEN NO ser iguales.
 Si el archivo no existe, créelo con permisos de archivo de solo lectura.
 Se recomienda también establecer alertnotify para recibir notificaciones de problemas.
-Por ejemplo: alertnotify=echo %%s | mail -s &quot;BurgerHash Alert&quot; admin@foo.com
+Por ejemplo: alertnotify=echo %%s | mail -s &quot;BurgerBot Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2343,8 +2343,8 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;BurgerHash Alert&quot; admin@f
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. BurgerHash is probably already running.</source>
-        <translation>No se puede bloquear el directorio de datos %s. Probablemente BurgerHash ya se está ejecutando.</translation>
+        <source>Cannot obtain a lock on data directory %s. BurgerBot is probably already running.</source>
+        <translation>No se puede bloquear el directorio de datos %s. Probablemente BurgerBot ya se está ejecutando.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2388,8 +2388,8 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;BurgerHash Alert&quot; admin@f
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BurgerHash will not work properly.</source>
-        <translation>Precaución: Por favor, ¡revise que la fecha y hora de su ordenador son correctas! Si su reloj está mal, BurgerHash no funcionará correctamente.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BurgerBot will not work properly.</source>
+        <translation>Precaución: Por favor, ¡revise que la fecha y hora de su ordenador son correctas! Si su reloj está mal, BurgerBot no funcionará correctamente.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2638,8 +2638,8 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;BurgerHash Alert&quot; admin@f
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the BurgerHash Wiki for SSL setup instructions)</source>
-        <translation>Opciones SSL: (ver la BurgerHash Wiki para instrucciones de configuración SSL)</translation>
+        <source>SSL options: (see the BurgerBot Wiki for SSL setup instructions)</source>
+        <translation>Opciones SSL: (ver la BurgerBot Wiki para instrucciones de configuración SSL)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2838,13 +2838,13 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;BurgerHash Alert&quot; admin@f
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of BurgerHash</source>
-        <translation>Error al cargar wallet.dat: El monedero requiere una versión más reciente de BurgerHash</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of BurgerBot</source>
+        <translation>Error al cargar wallet.dat: El monedero requiere una versión más reciente de BurgerBot</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart BurgerHash to complete</source>
-        <translation>El monedero ha necesitado ser reescrito. Reinicie BurgerHash para completar el proceso</translation>
+        <source>Wallet needed to be rewritten: restart BurgerBot to complete</source>
+        <translation>El monedero ha necesitado ser reescrito. Reinicie BurgerBot para completar el proceso</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2903,8 +2903,8 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;BurgerHash Alert&quot; admin@f
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. BurgerHash is probably already running.</source>
-        <translation>No es posible conectar con %s en este sistema. Probablemente BurgerHash ya está ejecutándose.</translation>
+        <source>Unable to bind to %s on this computer. BurgerBot is probably already running.</source>
+        <translation>No es posible conectar con %s en este sistema. Probablemente BurgerBot ya está ejecutándose.</translation>
     </message>
     <message>
         <location line="+64"/>

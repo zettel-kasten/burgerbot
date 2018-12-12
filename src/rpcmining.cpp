@@ -186,10 +186,10 @@ Value getwork(const Array& params, bool fHelp)
         );
 
     if (vNodes.empty() && !fTestNet)
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "BurgerHash is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "BurgerBot is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "BurgerHash is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "BurgerBot is downloading blocks...");
 
     static CBlockTemplate* pblocktemplate = NULL;
     static uint256 curBlockHash = 0;
@@ -361,10 +361,10 @@ Value getblocktemplate(const Array& params, bool fHelp)
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid mode");
 
     if (vNodes.empty() && !fTestNet)
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "BurgerHash is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "BurgerBot is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "BurgerHash is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "BurgerBot is downloading blocks...");
 
     // Update block
     static unsigned int nTransactionsUpdatedLast;

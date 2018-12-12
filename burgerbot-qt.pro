@@ -1,13 +1,13 @@
 TEMPLATE = app
-TARGET = burgerhash-qt
-macx:TARGET = "BurgerHash-Qt"
+TARGET = burgerbot-qt
+macx:TARGET = "BurgerBot-Qt"
 VERSION = 0.9.0.0
 INCLUDEPATH += src src/json src/qt
 QT += core gui network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
-#CONFIG += static
+CONFIG += static
 
 USE_UPNP = -
 
@@ -352,7 +352,7 @@ DEPENDPATH += src/qt/test
 QT += testlib
 DEFINES += USE_QRCODE
 LIBS += -lqrencode
-TARGET = burgerhash-qt_test
+TARGET = burgerbot-qt_test
 DEFINES += BITCOIN_QT_TEST
   macx: CONFIG -= app_bundle
 }
@@ -451,7 +451,7 @@ macx:HEADERS += src/qt/macdockiconhandler.h src/qt/macnotificationhandler.h
 macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm src/qt/macnotificationhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit -framework CoreServices
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
-macx:ICON = src/qt/res/icons/burgerhash.icns
+macx:ICON = src/qt/res/icons/burgerbot.icns
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread
