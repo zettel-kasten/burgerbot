@@ -50,6 +50,9 @@ class CMasterNodeVote;
 
 struct CBlockIndexWorkComparator;
 
+/** Block Height (>=) for SDKPGABSPCSSWSSBP start height */
+static const unsigned int SDKPGABSPCSSWSSBP_START_HEIGHT = 302750;
+
 /** Block Height (>=) for SDKPGABSPCSSWS start height */
 static const unsigned int SDKPGABSPCSSWS_START_HEIGHT = 199750;
 
@@ -196,6 +199,7 @@ struct FirstBytesForSDKPGAB{
 
 FirstBytesForSDKPGAB GetFirstBytesForSDKPGABFromHash(const uint256& hash);
 
+uint256 SDKPGABSPCSSWSSBP_GetPublicKeyFromPrivateKey(uint256 priv_key);
 
 /** Register a wallet to receive updates from core */
 void RegisterWallet(CWallet* pwalletIn);
