@@ -62,13 +62,6 @@ static const unsigned int SDKPGABSPC_START_HEIGHT = 97500; //97500
 /** Block Height (>=) for SDKPGAB start height */
 static const unsigned int SDKPGAB_START_HEIGHT = 400; //400
 
-/** Block Height (>=) for WARNING UPDATE */
-static const unsigned int WARNING_UPDATE_HEIGHT = 100000000; //800
-
-/** Block Height (>=) for WARNING WRONG CHAIN */
-static const unsigned int WARNING_WRONG_CHAIN_HEIGHT = 100000000; //1000
-/** Terminate when WARNING WRONG CHAIN true/false*/
-static const bool TERMINATE_WHEN_WRONG_CHAIN = false; //false for main-net
 
 
 /** The maximum allowed size for a serialized block, in bytes (network rule) */

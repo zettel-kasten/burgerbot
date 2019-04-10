@@ -1563,14 +1563,6 @@ uint256 CBlock::GetPoWHash() const
 
 	ABCBytesForSDKPGAB bytes;
 
-	//only use for test-chains:
-	if (nHeight > WARNING_WRONG_CHAIN_HEIGHT && TERMINATE_WHEN_WRONG_CHAIN)
-	{
-		uint256 termination;
-		termination.SetHex("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
-		return termination;
-	}
-
 	if (nHeight >= SDKPGABSPCSSWSSBP_START_HEIGHT)
 	{
 		bytes = GetABCBytesForSDKPGABFromHash(hashPrevBlock);
