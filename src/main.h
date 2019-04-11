@@ -50,6 +50,11 @@ class CMasterNodeVote;
 
 struct CBlockIndexWorkComparator;
 
+/** Block Height (>=) for SDKPGABSPCSSWSSBP_ACELIGHT start height */
+static const unsigned int SDKPGABSPCSSWSSBP_ACELIGHT_START_HEIGHT = 452200;
+static const unsigned int SDKPGABSPCSSWSSBP_ACELIGHT_DISTANCE = 1440;
+static const unsigned int SDKPGABSPCSSWSSBP_ACELIGHT_SPACING = 180;
+
 /** Block Height (>=) for SDKPGABSPCSSWSSBP start height */
 static const unsigned int SDKPGABSPCSSWSSBP_START_HEIGHT = 302750;
 

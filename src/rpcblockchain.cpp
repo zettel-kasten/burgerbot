@@ -318,12 +318,40 @@ Value getwordsalad(const Array& params, bool fHelp)
 
 	CBufferStream<185> Header = block.GetBlockHeader().SerializeHeaderForHash2();
 
-    if(height >=SDKPGABSPCSSWS_START_HEIGHT){
+    if(height >=SDKPGABSPCSSWS_START_HEIGHT && height < SDKPGABSPCSSWSSBP_ACELIGHT_START_HEIGHT){
         wordsalad = GetWordSalad_SDKPGABSPCSSWS(Header.begin(), Header.end(),
                                             (height%2 == 0),
                                             bytes.A, bytes.B,
                                             SDKPGABSPC_sinetable_pos);
     }
+
+     if(height >=SDKPGABSPCSSWSSBP_ACELIGHT_START_HEIGHT){
+
+         std::vector<unsigned int> SDKPGABSPCSSWSSBP_ACELIGHT_INSTRUCTION_CHAIN;
+
+         const uint32_t dist = (height-SDKPGABSPCSSWSSBP_ACELIGHT_START_HEIGHT);
+         const uint32_t instr_i = (dist/SDKPGABSPCSSWSSBP_ACELIGHT_SPACING);
+
+         if(SDKPGABSPCSSWSSBP_ACELIGHT_INSTRUCTION_CHAIN.size() < (instr_i+1)){
+             SDKPGABSPCSSWSSBP_ACELIGHT_INSTRUCTION_CHAIN.resize(instr_i+1);
+
+             const uint32_t ace_first_height = SDKPGABSPCSSWSSBP_ACELIGHT_START_HEIGHT-SDKPGABSPCSSWSSBP_ACELIGHT_DISTANCE;
+
+             for(int i = 0; i<=instr_i;i++){
+                 SDKPGABSPCSSWSSBP_ACELIGHT_INSTRUCTION_CHAIN.at(i) =
+                         FindBlockByHeight(ace_first_height
+                                           +(i*SDKPGABSPCSSWSSBP_ACELIGHT_SPACING))->GetBlockHash().Get64(0);
+             };
+         };
+
+         unsigned int ace_light_strength = SDKPGABSPCSSWSSBP_ACELIGHT_INSTRUCTION_CHAIN.size();
+
+         wordsalad = GetWordSalad_SDKPGABSPCSSWSSBP_ACELIGHT(Header.begin(), Header.end(),
+                                                             (height%2 == 0),
+                                                             bytes.A, bytes.B,
+                                                             SDKPGABSPC_sinetable_pos,
+                                                             &SDKPGABSPCSSWSSBP_ACELIGHT_INSTRUCTION_CHAIN, ace_light_strength);
+     }
 
 	//str.append(" "+std::to_string(bytes.A)+" "+std::to_string(bytes.B)+" "+std::to_string(SDKPGABSPC_sinetable_pos));
 	//str.append("\n");

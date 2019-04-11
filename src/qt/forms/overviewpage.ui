@@ -500,10 +500,10 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
-          <widget class="QLabel" name="label_13">
+         <item row="2" column="1">
+          <widget class="QLabel" name="label_15">
            <property name="text">
-            <string>SDK</string>
+            <string>SDKPGAB</string>
            </property>
           </widget>
          </item>
@@ -517,33 +517,6 @@
            </property>
            <property name="text">
             <string>&gt;=400 &amp;&amp; &lt; 97500</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QLabel" name="label_15">
-           <property name="text">
-            <string>SDKPGAB</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_16">
-           <property name="font">
-            <font>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>&gt;=97500 &amp;&amp; &lt; 199750</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="1">
-          <widget class="QLabel" name="label_19">
-           <property name="text">
-            <string>SDKPGABSPCSSWS</string>
            </property>
           </widget>
          </item>
@@ -572,6 +545,40 @@
            </property>
           </widget>
          </item>
+         <item row="4" column="1">
+          <widget class="QLabel" name="label_19">
+           <property name="text">
+            <string>SDKPGABSPCSSWS</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_16">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>&gt;=97500 &amp;&amp; &lt; 199750</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>SDK</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLabel" name="label_21">
+           <property name="text">
+            <string>SDKPGABSPCSSWSSBP</string>
+           </property>
+          </widget>
+         </item>
          <item row="5" column="0">
           <widget class="QLabel" name="label_20">
            <property name="font">
@@ -581,14 +588,27 @@
             </font>
            </property>
            <property name="text">
-            <string>&gt;=302750</string>
+            <string>&gt;=302750 &amp;&amp; &lt; 452200</string>
            </property>
           </widget>
          </item>
-         <item row="5" column="1">
-          <widget class="QLabel" name="label_21">
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_22">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="text">
-            <string>SDKPGABSPCSSWSSBP</string>
+            <string>&gt;= 452200</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLabel" name="label_23">
+           <property name="text">
+            <string>SDKPGABSPCSSWSSBP-ACELIGHT</string>
            </property>
           </widget>
          </item>
