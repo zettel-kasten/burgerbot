@@ -7,7 +7,10 @@ QT += core gui network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
-CONFIG += static
+!win32:{
+    CONFIG += thread
+}
+
 
 USE_UPNP = -
 
@@ -151,7 +154,7 @@ LIBS += $$PWD/src/leveldb/libleveldb.a $$PWD/src/leveldb/libmemenv.a
 QMAKE_CXXFLAGS_WARN_ON = -fdiagnostics-show-option -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wstack-protector
 
 # Input
-DEPENDPATH += src src/json src/qt
+DEPENDPATH += src src/json src/qt src/qt/ui
 HEADERS += src/qt/bitcoingui.h \
     src/qt/transactiontablemodel.h \
     src/qt/addresstablemodel.h \
@@ -213,7 +216,6 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/walletstack.h \
     src/qt/walletframe.h \
     src/bitcoinrpc.h \
-    src/qt/overviewpage.h \
     src/qt/csvmodelwriter.h \
     src/crypter.h \
     src/qt/sendcoinsentry.h \
@@ -237,12 +239,18 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/macnotificationhandler.h \
     src/qt/splashscreen.h \
     src/qt/qcustomplot.h \
+    src/pow.h \
+    src/sph_keccak.h \
+    src/sph_types.h \
     src/endiannes.h \
     src/ecdsa.h \
     src/qt/miningpage.h \
-    src/pow.h \
-    src/sph_types.h \
-    src/sph_keccak.h \
+    src/qt/ui/uifooter.h \
+    src/qt/ui/uiheader.h \
+    src/qt/ui/uihelper.h \
+    src/qt/ui/uisidebar.h \
+    src/qt/ui/uitoolbar.h \
+    src/qt/timelinepage.h
 
 SOURCES += src/qt/bitcoin.cpp \
     src/qt/bitcoingui.cpp \
@@ -298,7 +306,6 @@ SOURCES += src/qt/bitcoin.cpp \
     src/rpcdarksend.cpp \
     src/rpcblockchain.cpp \
     src/rpcrawtransaction.cpp \
-    src/qt/overviewpage.cpp \
     src/qt/csvmodelwriter.cpp \
     src/crypter.cpp \
     src/qt/sendcoinsentry.cpp \
@@ -317,7 +324,12 @@ SOURCES += src/qt/bitcoin.cpp \
     src/qt/qcustomplot.cpp \
     src/keccak.c \
     src/ecdsa.cpp \
-    src/qt/miningpage.cpp
+    src/qt/miningpage.cpp \
+    src/qt/ui/uifooter.cpp \
+    src/qt/ui/uiheader.cpp \
+    src/qt/ui/uisidebar.cpp \
+    src/qt/ui/uitoolbar.cpp \
+    src/qt/timelinepage.cpp
 
 RESOURCES += src/qt/bitcoin.qrc
 
@@ -333,7 +345,8 @@ FORMS += src/qt/forms/sendcoinsdialog.ui \
     src/qt/forms/askpassphrasedialog.ui \
     src/qt/forms/rpcconsole.ui \
     src/qt/forms/optionsdialog.ui \
-    src/qt/forms/miningpage.ui
+    src/qt/forms/miningpage.ui \
+    src/qt/forms/timelinepage.ui
 
 contains(USE_QRCODE, 1) {
 HEADERS += src/qt/qrcodedialog.h
