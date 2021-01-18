@@ -39,7 +39,7 @@ static boost::thread_group* rpc_worker_group = NULL;
 
 static inline unsigned short GetDefaultRPCPort()
 {
-    return GetBoolArg("-testnet", false) ? 62000 : 52000;
+    return 52000;
 }
 
 // RPC without username and password for simplified mining
